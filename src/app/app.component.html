@@ -1,0 +1,161 @@
+<form>
+
+  <div class="d-flex justify-content-around">
+    <div>
+      <label for="name">Podaj imię:
+        <input class="form-control" type="text" id="name" name="imie" required>
+      </label>
+    </div>
+    
+    <div>
+      <label for="name">Podaj nazwisko:
+        <input class="form-control" type="text" id="name" name="nazwisko" required>
+      </label>
+    </div>
+    
+    <div>
+      <label for="name">Podaj nick:
+        <input class="form-control" type="text" id="name" name="nick" required>
+      </label>
+    </div>
+    
+    <div>
+      <label for="game">Gra:</label>
+      <select class="form-select" name="game" required>
+        <option selected>Wybierz grę:</option>
+        <option value="cs2">Counter-Strike Global Offensive 2</option>
+        <option value="valorant">Valorant</option>
+        <option value="lol">League of Legends</option>
+      </select>
+    </div>
+
+    
+    
+    <div>
+      <br>
+    <button class="btn btn-primary" (click)="Add()" name="btn" type="submit">Dodaj</button>
+  </div>
+</div><br><br>
+</form>
+<div class="d-flex justify-content-evenly">
+  <div>
+    <label for="">
+      <b>Gracze CS2:</b>
+     </label>
+    <table class="table table-striped" id="cs2">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">L.p</th>
+          <th scope="col">Imię</th>
+          <th scope="col">Nazwisko</th>
+          <th scope="col">Nick</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gracz of graczecs2">
+          <td>1</td>
+          <td>{{gracz.imie}}</td>
+          <td>{{gracz.nazwisko}}</td>
+          <td>{{gracz.nick}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<div>
+ <label for="">
+  <b>Gracze Valorant:</b>
+ </label>
+  <table class="table table-striped" id="valorant">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">L.p</th>
+        <th scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">Nick</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Johnson</td>
+        <td>MJ123</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Emily</td>
+        <td>Smith</td>
+        <td>ES456</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Michael</td>
+        <td>Williams</td>
+        <td>MW789</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Sophia</td>
+        <td>Brown</td>
+        <td>SB321</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>James</td>
+        <td>Davis</td>
+        <td>JD654</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <label for="">
+    <b>Gracze League of Legends:</b>
+   </label>
+  <table class="table table-striped" id="lol">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">L.p</th>
+        <th scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">Nick</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Emma</td>
+        <td>Johnson</td>
+        <td>EJ123</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Noah</td>
+        <td>Smith</td>
+        <td>NS456</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ava</td>
+        <td>Williams</td>
+        <td>AW789</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Oliver</td>
+        <td>Brown</td>
+        <td>OB321</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Isabella</td>
+        <td>Miller</td>
+        <td>IM654</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
